@@ -20,7 +20,9 @@ use Illuminate\Support\Facades\Route;
 /* Index */
 
 Route::get('/welcome', 'DashboardController@index');
-Route::get('/dashboard', 'DashboardController@dashboard');
+Route::get('shopping', 'ShoppingController@index');
+Route::get('shopping/create', 'ShoppingController@create');
+Route::post('shopping/create', 'ShoppingController@store');
 
 /* Login */
 

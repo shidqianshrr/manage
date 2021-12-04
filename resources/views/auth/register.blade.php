@@ -52,6 +52,16 @@
                   <h4 class="card-title">Sign Up</h4>
                 </div>
                 <div class="card-body">
+                  <span class="bmd-form-group">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">
+                                <i class="material-icons">face</i>
+                            </span>
+                        </div>
+                        <input name="username" id="username" type="username" class="form-control" placeholder="Username" required value="{{ old('username') }}">
+                    </div>
+                </span>
                 <span class="bmd-form-group">
                     <div class="input-group">
                         <div class="input-group-prepend">
@@ -72,6 +82,56 @@
                       <input name="email" id="email" type="email" class="form-control" placeholder="Email" required value="{{ old('email') }}">
                     </div>
                   </span>
+                  <span class="bmd-form-group">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">
+                                <i class="material-icons">face</i>
+                            </span>
+                        </div>
+                        <input name="phone" id="phone" type="text" class="form-control" placeholder="Phone" required value="{{ old('phone') }}">
+                    </div>
+                </span>
+                <span class="bmd-form-group">
+                  <div class="input-group">
+                      <div class="input-group-prepend">
+                          <span class="input-group-text">
+                              <i class="material-icons">face</i>
+                          </span>
+                      </div>
+                      <input name="country" id="country" type="text" class="form-control" placeholder="Country" required value="{{ old('phone') }}">
+                  </div>
+              </span>
+              <span class="bmd-form-group">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">
+                            <i class="material-icons">face</i>
+                        </span>
+                    </div>
+                    <input name="city" id="city" type="text" class="form-control" placeholder="City" required value="{{ old('phone') }}">
+                </div>
+            </span>
+            <span class="bmd-form-group">
+              <div class="input-group">
+                  <div class="input-group-prepend">
+                      <span class="input-group-text">
+                          <i class="material-icons">face</i>
+                      </span>
+                  </div>
+                  <input name="postcode" id="postcode" type="text" class="form-control" placeholder="Postcode" required value="{{ old('phone') }}">
+              </div>
+            </span>
+            <span class="bmd-form-group">
+              <div class="input-group">
+                  <div class="input-group-prepend">
+                      <span class="input-group-text">
+                          <i class="material-icons">face</i>
+                      </span>
+                  </div>
+                  <input name="address" id="address" type="text" class="form-control" placeholder="Address" required value="{{ old('phone') }}">
+              </div>
+            </span>
                   <span class="bmd-form-group">
                     <div class="input-group">
                       <div class="input-group-prepend">
