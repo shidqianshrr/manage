@@ -1,4 +1,3 @@
-
 <!--
  =========================================================
  Material Dashboard PRO - v2.1.0
@@ -15,18 +14,14 @@
 -->
 
 <!DOCTYPE html>
-<html lang="en">
-
-
-<!-- Mirrored from demos.creative-tim.com/material-dashboard-pro/examples/tables/regular.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 06 Feb 2020 08:38:16 GMT -->
-<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<html lang="en"><meta http-equiv="content-type" content="text/html;charset=utf-8" />
 <head>
   <meta charset="utf-8" />
   <link rel="apple-touch-icon" sizes="76x76" href="{{url('style/adminty')}}/img/apple-icon.png">
   <link rel="icon" type="image/png" href="{{url('style/adminty')}}/img/favicon.png">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <title>
-    Dashboard
+    Form Event
   </title>
   <meta property="og:description" content="Material Dashboard PRO is a Premium Material Bootstrap 4 Admin with a fresh, new design inspired by Google's Material Design." />
   <meta property="og:site_name" content="Creative Tim" />
@@ -38,235 +33,78 @@
   <!-- CSS Just for demo purpose, don't include it in your project -->
   <link href="{{url('style/adminty')}}/demo/demo.css" rel="stylesheet" />
 </head>
-
 <body class="">
-  <div class="wrapper ">
-    <div class="sidebar" data-color="rose" data-background-color="black" data-image="{{url('style/adminty')}}/img/sidebar-1.jpg">
-      <!--
-        Tip 1: You can change the color of the sidebar using: data-color="purple | azure | green | orange | danger"
 
-        Tip 2: you can also add an image using data-image tag
-    -->
-      <div class="logo">
-        <a href="http://www.creative-tim.com/" class="simple-text logo-mini">
-          CT
-        </a>
-        <a href="http://www.creative-tim.com/" class="simple-text logo-normal">
-          Dashboard
-        </a>
+    <div class="sidebar" data-color="rose" data-background-color="black" data-image="{{url('style/adminty')}}/img/sidebar-1.jpg">
+        <div class="sidebar-wrapper">
+          <ul class="nav">
+            <li class="nav-item ">
+              <a class="nav-link" href="{{url('profil')}}">
+                <i class="material-icons">dashboard</i>
+                <p> Dashboard </p>
+              </a>
+            </li>
+          </ul>
+          <ul class="nav">
+            <li class="nav-item ">
+              <a class="nav-link" href="{{url('event')}}">
+                <i class="material-icons">content_paste</i>
+                <p> Event </p>
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
-      <div class="sidebar-wrapper">
-        <ul class="nav">
-          <li class="nav-item ">
-            <a class="nav-link" href="">
-              <i class="material-icons">grid_on</i>
-              <p> Shopping </p>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-    <div class="main-panel">
-      <!-- Navbar -->
-      <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
-        <div class="container-fluid">
-          <div class="navbar-wrapper">
-            <div class="navbar-minimize">
-              <button id="minimizeSidebar" class="btn btn-just-icon btn-white btn-fab btn-round">
-                <i class="material-icons text_align-center visible-on-sidebar-regular">more_vert</i>
-                <i class="material-icons design_bullet-list-67 visible-on-sidebar-mini">view_list</i>
-              </button>
-            </div>
-            <a class="navbar-brand" href="#pablo">Regular Tables</a>
-          </div>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="navbar-toggler-icon icon-bar"></span>
-            <span class="navbar-toggler-icon icon-bar"></span>
-            <span class="navbar-toggler-icon icon-bar"></span>
-          </button>
-          <div class="collapse navbar-collapse justify-content-end">
-            <form class="navbar-form">
-              <div class="input-group no-border">
-                <input type="text" value="" class="form-control" placeholder="Search...">
-                <button type="submit" class="btn btn-white btn-round btn-just-icon">
-                  <i class="material-icons">search</i>
-                  <div class="ripple-container"></div>
+      <div class="main-panel">
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
+          <div class="container-fluid">
+            <div class="navbar-wrapper">
+              <div class="navbar-minimize">
+                <button id="minimizeSidebar" class="btn btn-just-icon btn-white btn-fab btn-round">
+                  <i class="material-icons text_align-center visible-on-sidebar-regular">more_vert</i>
+                  <i class="material-icons design_bullet-list-67 visible-on-sidebar-mini">view_list</i>
                 </button>
               </div>
-            </form>
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link" href="#pablo">
-                  <i class="material-icons">dashboard</i>
-                  <p class="d-lg-none d-md-block">
-                    Stats
-                  </p>
-                </a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link" href="http://example.com/" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <i class="material-icons">notifications</i>
-                  <span class="notification">5</span>
-                  <p class="d-lg-none d-md-block">
-                    Some Actions
-                  </p>
-                </a>
-                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-                  <a class="dropdown-item" href="#">Mike John responded to your email</a>
-                  <a class="dropdown-item" href="#">You have 5 new tasks</a>
-                  <a class="dropdown-item" href="#">You're now friend with Andrew</a>
-                  <a class="dropdown-item" href="#">Another Notification</a>
-                  <a class="dropdown-item" href="#">Another One</a>
+              <a class="navbar-brand" href="#pablo">{{@$page}}</a>
+            </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="navbar-toggler-icon icon-bar"></span>
+              <span class="navbar-toggler-icon icon-bar"></span>
+              <span class="navbar-toggler-icon icon-bar"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end">
+              <form class="navbar-form">
+                <div class="input-group no-border">
+                  <input type="text" value="" class="form-control" placeholder="Search...">
+                  <button type="submit" class="btn btn-white btn-round btn-just-icon">
+                    <i class="material-icons">search</i>
+                    <div class="ripple-container"></div>
+                  </button>
                 </div>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link" href="#pablo" id="navbarDropdownProfile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <i class="material-icons">person</i>
-                  <p class="d-lg-none d-md-block">
-                    Account
-                  </p>
-                </a>
-                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownProfile">
-                  <a class="dropdown-item" href="#">Profile</a>
-                  <a class="dropdown-item" href="#">Settings</a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="#">Log out</a>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-      <!-- End Navbar -->
-      <div class="content">
-        <div class="container-fluid">
-          <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="card ">
-                      <div class="card-header card-header-rose card-header-text">
-                        <div class="card-text">
-                          <h4 class="card-title">Create</h4>
-                        </div>
-                      </div>
-                      <div class="card-body ">
-                        <form method="POST" enctype="multipart/form-data" class="form-horizontal">
-                            {{ csrf_field() }}
-                          <div class="row">
-                            <label class="col-sm-2 col-form-label">Name</label>
-                            <div class="col-sm-10">
-                              <div class="form-group">
-                                <input name="Name" id="Name" type="text" class="form-control" placeholder="">
-                              </div>
-                            </div>
-                          </div>
-                          <div class="card-footer ">
-                            <button type="submit" class="btn btn-fill btn-rose">Submit</button>
-                          </div>
-                        </form>
-                      </div>
-                    </div>
-                  </div>  
+              </form>
+              <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                  <a class="nav-link" href="#pablo" id="navbarDropdownProfile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="material-icons">person</i>
+                    <p class="d-lg-none d-md-block">
+                      Account
+                    </p>
+                  </a>
+                  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownProfile">
+                    <a class="dropdown-item" href="#">Profile</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="{{url('/')}}">Log out</a>
+                  </div>
+                </li>
+              </ul>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="fixed-plugin">
-    <div class="dropdown show-dropdown">
-      <a href="#" data-toggle="dropdown">
-        <i class="fa fa-cog fa-2x"> </i>
-      </a>
-      <ul class="dropdown-menu">
-        <li class="header-title"> Sidebar Filters</li>
-        <li class="adjustments-line">
-          <a href="javascript:void(0)" class="switch-trigger active-color">
-            <div class="badge-colors ml-auto mr-auto">
-              <span class="badge filter badge-purple" data-color="purple"></span>
-              <span class="badge filter badge-azure" data-color="azure"></span>
-              <span class="badge filter badge-green" data-color="green"></span>
-              <span class="badge filter badge-warning" data-color="orange"></span>
-              <span class="badge filter badge-danger" data-color="danger"></span>
-              <span class="badge filter badge-rose active" data-color="rose"></span>
-            </div>
-            <div class="clearfix"></div>
-          </a>
-        </li>
-        <li class="header-title">Sidebar Background</li>
-        <li class="adjustments-line">
-          <a href="javascript:void(0)" class="switch-trigger background-color">
-            <div class="ml-auto mr-auto">
-              <span class="badge filter badge-black active" data-background-color="black"></span>
-              <span class="badge filter badge-white" data-background-color="white"></span>
-              <span class="badge filter badge-red" data-background-color="red"></span>
-            </div>
-            <div class="clearfix"></div>
-          </a>
-        </li>
-        <li class="adjustments-line">
-          <a href="javascript:void(0)" class="switch-trigger">
-            <p>Sidebar Mini</p>
-            <label class="ml-auto">
-              <div class="togglebutton switch-sidebar-mini">
-                <label>
-                  <input type="checkbox">
-                  <span class="toggle"></span>
-                </label>
-              </div>
-            </label>
-            <div class="clearfix"></div>
-          </a>
-        </li>
-        <li class="adjustments-line">
-          <a href="javascript:void(0)" class="switch-trigger">
-            <p>Sidebar Images</p>
-            <label class="switch-mini ml-auto">
-              <div class="togglebutton switch-sidebar-image">
-                <label>
-                  <input type="checkbox" checked="">
-                  <span class="toggle"></span>
-                </label>
-              </div>
-            </label>
-            <div class="clearfix"></div>
-          </a>
-        </li>
-        <li class="header-title">Images</li>
-        <li class="active">
-          <a class="img-holder switch-trigger" href="javascript:void(0)">
-            <img src="{{url('style/adminty')}}/img/sidebar-1.jpg" alt="">
-          </a>
-        </li>
-        <li>
-          <a class="img-holder switch-trigger" href="javascript:void(0)">
-            <img src="{{url('style/adminty')}}/img/sidebar-2.jpg" alt="">
-          </a>
-        </li>
-        <li>
-          <a class="img-holder switch-trigger" href="javascript:void(0)">
-            <img src="{{url('style/adminty')}}/img/sidebar-3.jpg" alt="">
-          </a>
-        </li>
-        <li>
-          <a class="img-holder switch-trigger" href="javascript:void(0)">
-            <img src="{{url('style/adminty')}}/img/sidebar-4.jpg" alt="">
-          </a>
-        </li>
-        <li class="button-container github-star">
-          <a class="github-button" href="https://github.com/creativetimofficial/ct-material-dashboard-pro" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star ntkme/github-buttons on GitHub">Star</a>
-        </li>
-        <li class="header-title">Thank you for 95 shares!</li>
-        <li class="button-container text-center">
-          <button id="twitter" class="btn btn-round btn-twitter"><i class="fa fa-twitter"></i> &middot; 45</button>
-          <button id="facebook" class="btn btn-round btn-facebook"><i class="fa fa-facebook-f"></i> &middot; 50</button>
-          <br>
-          <br>
-        </li>
-      </ul>
-    </div>
-  </div>
+        </nav>
+
+        @yield('content')
+</body>
   <!--   Core JS Files   -->
   <script src="{{url('style/adminty')}}/js/core/jquery.min.js"></script>
   <script src="{{url('style/adminty')}}/js/core/popper.min.js"></script>
@@ -572,8 +410,5 @@
   <noscript>
     <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=111649226022273&amp;ev=PageView&amp;noscript=1" />
   </noscript>
-</body>
-
-
 <!-- Mirrored from demos.creative-tim.com/material-dashboard-pro/examples/tables/regular.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 06 Feb 2020 08:38:16 GMT -->
 </html>

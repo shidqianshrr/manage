@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\EventController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,9 +22,6 @@ use Illuminate\Support\Facades\Route;
 /* Index */
 
 Route::get('/welcome', 'DashboardController@index');
-Route::get('shopping', 'ShoppingController@index');
-Route::get('shopping/create', 'ShoppingController@create');
-Route::post('shopping/create', 'ShoppingController@store');
 
 /* Login */
 
@@ -36,3 +35,14 @@ Route::get('/register', 'RegisterController@register');
 
 /* Auth */
 Route::post('logout', 'AuthController@logout');
+
+
+Route::get('/profil', 'ProfilController@index');
+
+/* Event */
+route::get('/event', 'EventController@index');
+route::get('event/create', 'EventController@create');
+route::post('event/create', 'EventController@store');
+route::get('event/edit/{id}', 'EventController@edit');
+route::post('event/edit/{id}', 'EventController@update');
+route::get('event/delete/{id}', 'EventController@destroy');

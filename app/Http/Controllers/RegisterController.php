@@ -19,15 +19,12 @@ class RegisterController extends Controller
             'name'=>'required|max:255',
             'email'=>'required|email:dns|unique:users',
             'username'=>'required',
-            'password'=>'required|min:6|max:25',
-            'phone'=>'required',
-            'country'=>'required',
-            'city'=>'required',
-            'postcode'=>'required',
-            'address'=>'required',
+            'password'=>'required:with:conf_password|same:conf_password',
+            'conf_password' => 'required'
         ]);
 
         $validatedData['password']=Hash::make($validatedData['password']);
+        $validatedData['conf_password']=Hash::make($validatedData['conf_password']);
 
         user::create($validatedData);
 

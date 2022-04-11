@@ -84,54 +84,14 @@
                   </span>
                   <span class="bmd-form-group">
                     <div class="input-group">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text">
-                                <i class="material-icons">face</i>
-                            </span>
-                        </div>
-                        <input name="phone" id="phone" type="text" class="form-control" placeholder="Phone" required value="{{ old('phone') }}">
-                    </div>
-                </span>
-                <span class="bmd-form-group">
-                  <div class="input-group">
                       <div class="input-group-prepend">
-                          <span class="input-group-text">
-                              <i class="material-icons">face</i>
-                          </span>
-                      </div>
-                      <input name="country" id="country" type="text" class="form-control" placeholder="Country" required value="{{ old('phone') }}">
-                  </div>
-              </span>
-              <span class="bmd-form-group">
-                <div class="input-group">
-                    <div class="input-group-prepend">
                         <span class="input-group-text">
-                            <i class="material-icons">face</i>
+                          <i class="material-icons">lock_outline</i>
                         </span>
+                      </div>
+                      <input name="password" id="password" type="password" class="form-control" placeholder="Password" required>
                     </div>
-                    <input name="city" id="city" type="text" class="form-control" placeholder="City" required value="{{ old('phone') }}">
-                </div>
-            </span>
-            <span class="bmd-form-group">
-              <div class="input-group">
-                  <div class="input-group-prepend">
-                      <span class="input-group-text">
-                          <i class="material-icons">face</i>
-                      </span>
-                  </div>
-                  <input name="postcode" id="postcode" type="text" class="form-control" placeholder="Postcode" required value="{{ old('phone') }}">
-              </div>
-            </span>
-            <span class="bmd-form-group">
-              <div class="input-group">
-                  <div class="input-group-prepend">
-                      <span class="input-group-text">
-                          <i class="material-icons">face</i>
-                      </span>
-                  </div>
-                  <input name="address" id="address" type="text" class="form-control" placeholder="Address" required value="{{ old('phone') }}">
-              </div>
-            </span>
+                  </span>
                   <span class="bmd-form-group">
                     <div class="input-group">
                       <div class="input-group-prepend">
@@ -139,7 +99,7 @@
                           <i class="material-icons">lock_outline</i>
                         </span>
                       </div>
-                      <input name="password" id="password" type="password" class="form-control" placeholder="Password" required>
+                      <input name="conf_password" id="conf_password" type="password" class="form-control" placeholder="Confirm Password" required>
                     </div><br>
                   </span>
                   <a href="{{ url('/') }}" class="text-center col-sm-10">I already have a Account</a>

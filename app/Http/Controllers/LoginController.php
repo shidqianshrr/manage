@@ -23,7 +23,7 @@ class LoginController extends Controller
 
         if (Auth::attempt($security)) {
             $request->session()->regenerate();
-            return redirect()->intended('welcome');
+            return redirect()->intended('profil');
         }
 
         return back()->with('error', 'Email atau Password salah');
