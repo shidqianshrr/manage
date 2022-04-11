@@ -26,7 +26,7 @@
                         <label class="bmd-label-floating">Lokasi</label>
                         <input type="text" class="form-control" name="lokasi" id="lokasi" value="{{ $event->lokasi}}">
                       </div>
-                      <div class="form-group">
+                      <div>
                         <h4>Select Image</h4>
                         <div class="fileinput fileinput-new text-center" data-provides="fileinput">
                           <div class="fileinput-new thumbnail">

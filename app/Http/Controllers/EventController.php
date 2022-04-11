@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\EventModel;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class EventController extends Controller
 {
@@ -59,6 +60,7 @@ class EventController extends Controller
         $event = EventModel::where('id', $id)->first();
         $event->nama = $request->nama;
         $event->lokasi = $request->lokasi;
+        $event->updated_at = date('Y-m-d H:i:s');
 
         if ($request->hasFile('image')){
 
